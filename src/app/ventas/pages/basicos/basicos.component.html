@@ -1,0 +1,57 @@
+<div class="text-layout">
+  <h1>Pipes basicos</h1>
+  <p>Pipes incluidos en el Comon modules</p>
+</div>
+<div class="grid">
+  <div class="lg:col-4 md:col-6 col-12">
+    <p-card header="UpperCase" [subheader]="text | uppercase">
+      {{ text | uppercase }}
+    </p-card>
+  </div>
+  <div class="lg:col-4 md:col-6 col-12">
+    <p-card header="LowerCase" [subheader]="text | lowercase">
+      {{ text | lowercase }}
+    </p-card>
+  </div>
+  <div class="lg:col-4 col-12">
+    <p-card header="TitleCase" [subheader]="text | titlecase">
+      {{ text | titlecase }}
+    </p-card>
+  </div>
+</div>
+<div class="text-layout">
+  <h1>Pipes Date</h1>
+  <p>Pipes para mostrar las fechas</p>
+</div>
+<div class="grid">
+  <div class="col-12 sm:col-6">
+    <p-card>
+      <ul>
+        <li>Fecha basica</li>
+        <li>Fecha con pipe <strong>DATE</strong></li>
+        <li>Fecha con pipe <strong>DATE implementando param SHORT</strong></li>
+        <li>Fecha con pipe <strong>DATE implementando param LONG</strong></li>
+        <li>Fecha con pipe <strong>DATE implementando param CUSTOM</strong></li>
+      </ul>
+      <hr />
+      <ul>
+        <li>date | date: "long":"GMT-6"</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-12 sm:col-6">
+    <p-card>
+      <ul>
+        <li>{{ date }}</li>
+        <li>{{ date | date }}</li>
+        <li>{{ date | date: "short" }}</li>
+        <li>{{ date | date: "long" }}</li>
+        <li>{{ date | date: "EEEE HH:mm" }}</li>
+      </ul>
+      <hr />
+      <ul>
+        <li>{{ date | date: "long":"GMT-6" }}</li>
+      </ul>
+    </p-card>
+  </div>
+</div>

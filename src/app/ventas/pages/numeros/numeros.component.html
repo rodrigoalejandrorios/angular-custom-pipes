@@ -1,0 +1,21 @@
+<div class="text-layout">
+  <h1>Pipes numericos</h1>
+  <p>Pipes incluidos en el Comon modules</p>
+</div>
+<div class="grid">
+  <div class="col-4">
+    <p-card header="Numeros" subheader="del 2022">
+      <i class="pi pi-dollar"></i> {{ allSales | number: "1.2-2" }}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="Ingresos" subheader="del 2022">
+      {{ allSales | currency: "ARS":"symbol-narrow" }}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="Porcentajes" subheader="del 2022">
+      {{ percent | percent }}
+    </p-card>
+  </div>
+</div>

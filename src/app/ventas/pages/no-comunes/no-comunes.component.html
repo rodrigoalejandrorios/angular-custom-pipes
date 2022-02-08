@@ -1,0 +1,46 @@
+<div class="text-layout">
+  <h1>Pipes basicos</h1>
+  <p>Pipes incluidos en el Comon modules</p>
+</div>
+<div class="grid">
+  <div class="lg:col-6 col-12">
+    <p-fieldset legend="i18n Select Pipe" [toggleable]="true">
+      {{ genders | i18nSelect: initMapping }} {{ valor }} de prueba, vamos a
+      probar un pipe de i18n
+    </p-fieldset>
+  </div>
+  <div class="lg:col-6 col-12">
+    <p-fieldset legend="i18n Plural Pipe" [toggleable]="true">
+      Actualmente {{ clients | i18nPlural: mapClients }}
+    </p-fieldset>
+  </div>
+</div>
+<div class="grid">
+  <div class="lg:col-6 col-12"></div>
+  <div class="lg:col-6 col-12">
+    <button
+      (click)="minus()"
+      pButton
+      pRipple
+      type="button"
+      icon="pi pi-minus"
+      class="p-button-rounded"
+    ></button>
+    <button
+      (click)="plus()"
+      pButton
+      pRipple
+      type="button"
+      icon="pi pi-plus"
+      class="p-button-rounded"
+    ></button>
+  </div>
+</div>
+<button
+  (click)="(activeState)"
+  pButton
+  pRipple
+  type="button"
+  icon="pi pi-plus"
+  class="p-button-rounded"
+></button>
